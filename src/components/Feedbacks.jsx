@@ -6,6 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
 
+
 const FeedbackCard = ({
   index,
   testimonial,
@@ -26,10 +27,10 @@ const FeedbackCard = ({
       <div className='mt-7 flex justify-between items-center gap-1'>
         <div className='flex-1 flex flex-col'>
           <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
+            <span className='blue-text-gradient'></span> {name}
           </p>
           <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
+            {designation} {company}
           </p>
         </div>
 
@@ -45,22 +46,28 @@ const FeedbackCard = ({
 
 const Feedbacks = () => {
   return (
-    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+    <div className={`mt-12 bg-black-100 rounded-[100px]`}>
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <h2 className={styles.sectionHeadText}>Ambitions</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
+
+      <div className="flex">
+        <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+          {testimonials.map((testimonial, index) => (
+            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          ))}
+        </div>
+        
+
+      
       </div>
     </div>
   );
 };
+
 
 export default SectionWrapper(Feedbacks, "");
