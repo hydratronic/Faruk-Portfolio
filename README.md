@@ -13,8 +13,7 @@ This project is a website that showcases stunning 3D models and animations using
 - [License](#license)
 
 ## Description
-
-In this course, you'll learn how to use ThreeJS, React Three Fiber, TailwindCSS, and Framer Motion to create a visually appealing and interactive 3D graphics website. The project focuses on loading, creating, and customizing stunning 3D models and geometries, implementing various lighting techniques, working with cameras and positioning objects in space, and adding animations using Framer Motion.
+ The project focuses on loading, creating, and customizing stunning 3D models and geometries, implementing various lighting techniques, working with cameras and positioning objects in space, and adding animations using Framer Motion.
 
 The code follows industry-standard best practices and utilizes Higher Order Components (HOCs) to make it reusable and scalable. The website also includes a form for sending emails and is designed to be responsive across all devices. To improve performance, Suspense and Preload techniques are employed.
 
